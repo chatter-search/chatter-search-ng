@@ -1,0 +1,11 @@
+{
+  "name": "chatter-search-ng",
+  "version": "1.0.0",
+  "description": "Chatter search web client written with Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

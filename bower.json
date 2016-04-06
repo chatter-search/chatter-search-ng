@@ -1,0 +1,22 @@
+{
+  "name": "chatter-search-ng",
+  "description": "Chatter search web client written with Angular",
+  "main": "index.js",
+  "authors": [
+    "dmi3y <lapshukov@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#1.5.3"
+  }
+}
