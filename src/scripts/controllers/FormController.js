@@ -2,7 +2,7 @@
 ;(function () {
   'use strict'
   var app = angular.module('ChatterApp')
-  app.controller('FormController', ['$http', function ($http) {
+  app.controller('FormController', ['$http', 'UserService', function ($http, UserService) {
     var _self = this
     var apiUri = 'https://chatter-search-api.herokuapp.com'
     var userShowUri = apiUri + '/1.2.0/user_show'
@@ -23,9 +23,13 @@
         }
       )
       .then(
-        function (data) {
+        function (resp) {
+          var data = resp.data
           _self.isLoading = false
-          console.log(data)
+          UserService.userData.name = data && data.name
+          UserService.userData.profile_image_url_https = data && data.profile_image_url_https
+          UserService.userData.screen_name = data && data.screen_name
+          UserService.userData.description = data && data.description
         },
         function () {
           _self.isLoading = false
