@@ -7,8 +7,17 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body>
-	<main>
+<body ng-app="ChatterApp">
+	<main ng-view>
+		<div id="flappy-bird-form" ng-controller="FormController as formCtrl">
+			<div class="container">
+			  	<div ng-class="{loading:formCtrl.isLoading}" class="twitter"></div>
+			</div>
+			<form ng-submit="formCtrl.submit()" class="search-bar" ng-class="{expanded:formCtrl.isExpanded}" autocomplete="false">
+				<input focus-when="formCtrl.isExpanded" ng-model="formCtrl.screenName" id="search-bar-input" type="text" name="screenName" class="input" autocomplete="false">
+				<button ng-click="formCtrl.expandSearch()" type="reset" class="search"></button>
+			</form>
+		</div>
 		<div id="user-show"></div>
 		<div id="user-timeline"></div>
 	</main>
