@@ -3,5 +3,6 @@
 mkdir -p build
 
 cat \
-./src/scripts/* \
+./src/scripts/*.js \
+./src/scripts/*/**.js \
 > ./build/index.js

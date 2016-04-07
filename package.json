@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-styles": "./tasks/compile-styles.sh",
-    "watch-styles": "npm run compile-styles -- -w",
+    "watch-styles": "sane 'npm run compile-styles' ./src/styles --glob='**/*.scss'",
     "compile-components": "./tasks/compile-components.sh",
     "compile-scripts": "./tasks/compile-scripts.sh",
-    "watch-scripts": "sane 'npm run compile-scripts' --glob=./src/scripts/*/**.js",
+    "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
     "compile-index": "mkdir -p ./build && cp ./src/index.html ./build",
     "build": "./tasks/build.sh"
   },
