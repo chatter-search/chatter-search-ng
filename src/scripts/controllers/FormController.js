@@ -2,37 +2,30 @@
 ;(function () {
   'use strict'
   var app = angular.module('ChatterApp')
-  app.controller('FormController', ['$http', 'UserService', function ($http, UserService) {
-    var _self = this
-    var apiUri = 'https://chatter-search-api.herokuapp.com'
-    var userShowUri = apiUri + '/1.2.0/user_show'
-    var userTimelineUri = apiUri + '/1.2.0/user_timeline'
+  app.controller('FormController', function ($http, $scope, UserService) {
+    var that = this
 
     this.isExpanded = false
     this.isLoading = false
 
     this.expandSearch = function () {
-      _self.isExpanded = !_self.isExpanded
+      that.isExpanded = !that.isExpanded
     }
     this.submit = function () {
-      _self.isLoading = true
-      $http.get(userShowUri,
-        {
-          params: {
-            screen_name: _self.screenName
-          }
-        }
-      )
+      that.isLoading = true
+      UserService.all({
+        screen_name: that.screenName
+      })
       .then(
-        function (resp) {
-          var data = resp.data
-          _self.isLoading = false
-          UserService.setUserData(data)
+        function (resps) {
+          that.isLoading = false
+          $scope.user = resps[0].data
+          $scope.twits = resps[1].data
         },
         function () {
-          _self.isLoading = false
+          that.isLoading = false
         }
       )
     }
-  }])
+  })
 })()
