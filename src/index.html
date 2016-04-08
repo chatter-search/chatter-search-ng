@@ -9,7 +9,7 @@
 </head>
 <body ng-app="ChatterApp">
 	<main ng-view>
-		<div id="flappy-bird-form" ng-controller="FormController as formCtrl">
+		<div ng-controller="FormController as formCtrl">
 			<div class="container">
 			  	<div ng-class="{loading:formCtrl.isLoading}" class="twitter"></div>
 			</div>
@@ -17,9 +17,9 @@
 				<input focus-when="formCtrl.isExpanded" ng-model="formCtrl.screenName" id="search-bar-input" type="text" name="screenName" class="input" autocomplete="false">
 				<button ng-click="formCtrl.expandSearch()" type="reset" class="search"></button>
 			</form>
-		</div>
-    <user-card></user-card>
-		<div id="user-timeline"></div>
+      <user-card></user-card>
+      <twits-list></twits-list>
+    </div>
 	</main>
 	<script src="components.js"></script>
 	<script src="index.js"></script>
