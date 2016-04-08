@@ -2,7 +2,7 @@
 ;(function () {
   'use strict'
   var app = angular.module('ChatterApp')
-  app.controller('FormController', function ($http, $scope, UserService) {
+  app.controller('FormController', function ($scope, UserService) {
     var that = this
 
     this.isExpanded = false
