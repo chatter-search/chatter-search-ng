@@ -12,7 +12,9 @@
     "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
     "compile-templates": "./tasks/compile-templates.sh",
     "watch-templates": "sane 'npm run compile-templates' ./src --glob=**/*.html",
-    "build": "./tasks/build.sh"
+    "build": "./tasks/build.sh",
+    "surge": "surge ./build chatter-search.surge.sh",
+    "deploy": "npm run build && npm run surge"
   },
   "author": "",
   "license": "ISC",
