@@ -1,0 +1,7 @@
+<div id="user-show" ng-show="user.name">
+  <div class="profile-card">
+    <img ng-show="user.profile_image_url_https" ng-src="{{user.profile_image_url_https}}" alt="{{user.name}}" />
+    <div>{{user.name}}<span>@{{user.screen_name}}</span></div>
+    <div ng-show="user.description" class="profile-description">{{user.description}}</div>
+  </div>
+</div>

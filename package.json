@@ -10,7 +10,8 @@
     "compile-components": "./tasks/compile-components.sh",
     "compile-scripts": "./tasks/compile-scripts.sh",
     "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
-    "compile-index": "mkdir -p ./build && cp ./src/index.html ./build",
+    "compile-templates": "./tasks/compile-templates.sh",
+    "watch-templates": "sane 'npm run compile-templates' ./src --glob=**/*.html",
     "build": "./tasks/build.sh"
   },
   "author": "",

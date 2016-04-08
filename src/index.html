@@ -18,13 +18,7 @@
 				<button ng-click="formCtrl.expandSearch()" type="reset" class="search"></button>
 			</form>
 		</div>
-		<div id="user-show" ng-show="isShowCard()" ng-controller="UserController">
-			<div class="profile-card">
-        <img ng-show="user.profile_image_url_https" ng-src="{{user.profile_image_url_https}}" alt="{{user.name}}" />
-        <div>{{user.name}}<span>@{{user.screen_name}}</span></div>
-        <div ng-show="user.description" class="profile-description">{{user.description}}</div>
-      </div>
-		</div>
+    <user-card></user-card>
 		<div id="user-timeline"></div>
 	</main>
 	<script src="components.js"></script>
