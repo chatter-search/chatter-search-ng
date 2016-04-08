@@ -6,6 +6,7 @@
     var _self = this
     var apiUri = 'https://chatter-search-api.herokuapp.com'
     var userShowUri = apiUri + '/1.2.0/user_show'
+    var userTimelineUri = apiUri + '/1.2.0/user_timeline'
 
     this.isExpanded = false
     this.isLoading = false
@@ -26,10 +27,7 @@
         function (resp) {
           var data = resp.data
           _self.isLoading = false
-          UserService.userData.name = data && data.name
-          UserService.userData.profile_image_url_https = data && data.profile_image_url_https
-          UserService.userData.screen_name = data && data.screen_name
-          UserService.userData.description = data && data.description
+          UserService.setUserData(data)
         },
         function () {
           _self.isLoading = false
