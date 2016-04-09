@@ -1,7 +1,5 @@
 /* global angular */
-;(function () {
+angular.module('ChatterApp')
+.controller('UserController', function ($scope) {
   'use strict'
-  var app = angular.module('ChatterApp')
-  app.controller('UserController', function ($scope) {
-  })
-})()
+})

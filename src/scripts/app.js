@@ -1,5 +1,2 @@
 /* global angular */
-;(function () {
-  'use strict'
-  angular.module('ChatterApp', [])
-})()
+angular.module('ChatterApp', [])

@@ -4,7 +4,6 @@ angular.module('ChatterApp')
   'use strict'
   return {
     restrict: 'E',
-    templateUrl: 'templates/twitsList.html',
-    controller: 'TwitsController'
+    templateUrl: 'templates/twitsList.html'
   }
 })

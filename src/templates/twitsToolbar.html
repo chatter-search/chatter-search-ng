@@ -1,0 +1,16 @@
+<form class="user-timeline-toolbar">
+  <label>
+    Has image:<input ng-change="filter()" ng-model="hasImage" type="checkbox" name="hasImage" value="true" />
+  </label>
+  <label>
+    Minimal number of retweets:<input ng-change="filter()" ng-model="retweetCount" type="number" min="0" step="1" value="0" name="retweetCount" />
+  </label>
+  <radiogroup>
+    <label>
+      Sort by date:<input ng-change="order()" ng-model="sortBy" type="radio" value="created_at_timestamp" name="sortBy" />
+    </label>
+    <label>
+      Sort by length:<input ng-change="order()" ng-model="sortBy" type="radio" value="text_length" name="sortBy" />
+    </label>
+  </radiogroup>
+</form>

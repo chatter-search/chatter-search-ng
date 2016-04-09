@@ -1,12 +1,10 @@
 /* global angular */
-;(function () {
+angular.module('ChatterApp')
+.directive('userCard', function () {
   'use strict'
-  var app = angular.module('ChatterApp')
-  app.directive('userCard', function () {
-    return {
-      restrict: 'E',
-      templateUrl: 'templates/userCard.html',
-      controller: 'UserController'
-    }
-  })
-})()
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/userCard.html',
+    controller: 'UserController'
+  }
+})
