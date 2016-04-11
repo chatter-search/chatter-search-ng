@@ -1,28 +1,26 @@
 /* global angular */
 angular.module('ChatterApp')
 .controller('FormController', ($scope, UserService) => {
-  var that = this
+  $scope.isExpanded = false
+  $scope.isLoading = false
 
-  this.isExpanded = false
-  this.isLoading = false
-
-  this.expandSearch = () => {
-    that.isExpanded = !that.isExpanded
+  $scope.expandSearch = () => {
+    $scope.isExpanded = !$scope.isExpanded
   }
-  this.submit = () => {
-    that.isLoading = true
+  $scope.submit = () => {
+    $scope.isLoading = true
     UserService.all({
-      screen_name: that.screenName
+      screen_name: $scope.screenName
     })
     .then(
       (resps) => {
-        that.isLoading = false
+        $scope.isLoading = false
         $scope.user = resps[0].data
         $scope._twits = resps[1].data.slice()
         $scope.twits = resps[1].data
       },
       () => {
-        that.isLoading = false
+        $scope.isLoading = false
       }
     )
   }
