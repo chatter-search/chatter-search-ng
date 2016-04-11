@@ -1,3 +1,7 @@
 #!/usr/bin/env bash -x
 
-babel ./src/scripts --out-file ./build/index.js
+mkdir -p ./build
+
+babel ./src/scripts |\
+echo ";(function(){$(cat -)}();" > ./build/index.js
+
