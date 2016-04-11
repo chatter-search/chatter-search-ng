@@ -27,7 +27,7 @@ angular.module('ChatterApp')
   }
 
   function doOrder (twits) {
-    return $filter('orderBy')(twits, $scope.sortBy)
+    return $filter('orderBy')(twits, $scope.sortBy, true)
   }
   $scope.order = function () {
     $scope.twits = doOrder($scope.twits)
