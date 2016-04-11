@@ -1,7 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
 .provider('UserService', function UserServiceProvider () {
-  'use strict'
   var userShowUri
   var userTimelineUri
 

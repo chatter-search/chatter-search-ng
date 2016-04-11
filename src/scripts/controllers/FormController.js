@@ -1,7 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('FormController', function ($scope, UserService) {
-  'use strict'
+.controller('FormController', ($scope, UserService) => {
   var that = this
 
   this.isExpanded = false

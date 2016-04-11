@@ -1,7 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.directive('focusWhen', ['$timeout', ($timeout) => {
-  'use strict'
+.directive('focusWhen', ($timeout) => {
   var checkDirectivePrerequisites = (attrs) => {
     if (!attrs.focusWhen && attrs.focusWhen !== '') {
       throw new Error({
@@ -26,4 +25,4 @@ angular.module('ChatterApp')
       })
     }
   }
-}])
+})
