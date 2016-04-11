@@ -8,7 +8,9 @@
 
 ## Requirements
 
-Linux or Mac OS. NodeJs with npm, globally available [`bower`][bower], [`standard`][standard] and [`live-server`][live-server].
+- Linux or Mac OS.
+- NodeJs with npm.
+- Globally available [`bower`][bower], [`standard`][standard] and [`live-server`][live-server].
 
 > Windows should work too if it have bash shell support, though not guaranteed.
 
@@ -18,14 +20,16 @@ Linux or Mac OS. NodeJs with npm, globally available [`bower`][bower], [`standar
 - ES6 syntax for JavaScript through Babel
 - Sass as css preprocessor
 
-## Set up guide
+## Set up
 
-Execute following commands in the order specified.
+Install local dependencies.
 
 - `npm install && bower install`
 - `npm run build`
 
-These commands has to be executed each in separate terminal.
+
+Run watchers and live reload.
+Following commands has to be executed each in separate terminal.
 
 - `npm run watch-styles`
 - `npm run watch-scripts`
