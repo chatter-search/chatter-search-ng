@@ -4,11 +4,34 @@
 
 [chatter-search.surge.sh](http://chatter-search.surge.sh)
 
-# Code conventions
+# Develop
 
-- Use standardjs for linting
+## Requirements
 
-# Todo
+Linux or Mac OS. NodeJs with npm, globally available [`bower`][bower], [`standard`][standard] and [`live-server`][live-server].
 
-@TODO link to todo
+> Windows should work too if it have bash shell support, though not guaranteed.
 
+## Code conventions
+
+- Standardjs for JavaScript linting
+- ES6 syntax for JavaScript through Babel
+- Sass as css preprocessor
+
+## Set up guide
+
+Execute following commands in the order specified.
+
+- `npm install && bower install`
+- `npm run build`
+
+These commands has to be executed each in separate terminal.
+
+- `npm run watch-styles`
+- `npm run watch-scripts`
+- `npm run watch-templates`
+- `live-server ./build/`
+
+[bower]: https://www.npmjs.com/package/bower
+[standard]: https://www.npmjs.com/package/standard
+[live-server]: https://www.npmjs.com/package/live-server
