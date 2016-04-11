@@ -1,8 +1,3 @@
 #!/usr/bin/env bash -x
 
-mkdir -p build
-
-cat \
-./src/scripts/*.js \
-./src/scripts/*/**.js \
-> ./build/index.js
+babel ./src/scripts --out-file ./build/index.js

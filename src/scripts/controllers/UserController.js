@@ -1,5 +1,5 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('UserController', function ($scope) {
+.controller('UserController', ($scope) => {
   'use strict'
 })

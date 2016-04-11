@@ -1,6 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.directive('twitsList', function () {
+.directive('twitsList', () => {
   'use strict'
   return {
     restrict: 'E',

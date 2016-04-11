@@ -2,27 +2,26 @@
 angular.module('ChatterApp')
 .provider('UserService', function UserServiceProvider () {
   'use strict'
-  var apiUri
   var userShowUri
   var userTimelineUri
 
-  this.setApiEndpoints = function (conf) {
-    apiUri = conf.apiUri
+  this.setApiEndpoints = (conf) => {
+    var apiUri = conf.apiUri
     userShowUri = apiUri + conf.userShow
     userTimelineUri = apiUri + conf.userTimeline
   }
 
-  this.$get = function ($http, $q) {
+  this.$get = ($http, $q) => {
     return {
       all: function (params) {
         var user = $http.get(userShowUri,
           {
-            params: params
+            params
           }
         )
         var tweets = $http.get(userTimelineUri,
           {
-            params: params
+            params
           }
         )
         return $q.all([user, tweets])

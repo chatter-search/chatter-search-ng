@@ -7,22 +7,22 @@ angular.module('ChatterApp')
   this.isExpanded = false
   this.isLoading = false
 
-  this.expandSearch = function () {
+  this.expandSearch = () => {
     that.isExpanded = !that.isExpanded
   }
-  this.submit = function () {
+  this.submit = () => {
     that.isLoading = true
     UserService.all({
       screen_name: that.screenName
     })
     .then(
-      function (resps) {
+      (resps) => {
         that.isLoading = false
         $scope.user = resps[0].data
         $scope._twits = resps[1].data.slice()
         $scope.twits = resps[1].data
       },
-      function () {
+      () => {
         that.isLoading = false
       }
     )

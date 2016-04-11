@@ -1,6 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('TwitsToolbarController', function ($scope, $filter) {
+.controller('TwitsToolbarController', ($scope, $filter) => {
   'use strict'
   $scope.sortBy = 'created_at_timestamp'
   $scope.retweetCount = 0
@@ -8,19 +8,19 @@ angular.module('ChatterApp')
 
   function doFilter (twits) {
     if ($scope.hasImage) {
-      twits = $filter('filter')(twits, function (el, ix) {
+      twits = $filter('filter')(twits, (el, ix) => {
         return Boolean(el.photos)
       })
     }
     if ($scope.retweetCount) {
-      twits = $filter('filter')(twits, function (el, ix) {
+      twits = $filter('filter')(twits, (el, ix) => {
         return el.retweet_count > $scope.retweetCount
       })
     }
     return twits
   }
 
-  $scope.filter = function () {
+  $scope.filter = () => {
     var twits = doFilter($scope._twits.slice())
 
     $scope.twits = doOrder(twits)
@@ -29,7 +29,7 @@ angular.module('ChatterApp')
   function doOrder (twits) {
     return $filter('orderBy')(twits, $scope.sortBy, true)
   }
-  $scope.order = function () {
+  $scope.order = () => {
     $scope.twits = doOrder($scope.twits)
   }
 })
