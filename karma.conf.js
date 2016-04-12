@@ -12,7 +12,9 @@ module.exports = function (config) {
     files: [
       './node_modules/babel-polyfill/dist/polyfill.js',
       './bower_components/angular/angular.js',
-      './src/**/*.js',
+      './bower_components/angular-mocks/angular-mocks.js',
+      './src/templates/**/*.html',
+      './src/scripts/**/*.js',
       './tests/**/*Spec.js'
     ],
 
@@ -23,8 +25,15 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './src/**/*.js': ['babel'],
-      './tests/**/*Spec.js': ['babel']
+      './src/scripts/**/*.js': ['babel'],
+      './tests/**/*Spec.js': ['babel'],
+      './src/templates/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      // strip this from the file path
+      stripPrefix: 'src/',
+      moduleName: 'chatterTemplates'
     },
 
     // test results reporter to use
