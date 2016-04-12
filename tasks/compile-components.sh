@@ -3,5 +3,6 @@
 mkdir -p build
 
 cat \
+./node_modules/babel-polyfill/dist/polyfill.js \
 ./bower_components/angular/angular.js \
-> build/components.js
+> build/lib.js
