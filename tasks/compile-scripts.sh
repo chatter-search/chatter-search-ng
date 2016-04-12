@@ -3,5 +3,5 @@
 mkdir -p ./build
 
 babel ./src/scripts --source-maps |\
-echo ";(function(){ $(cat -) })();" > ./build/index.js
+printf ";(function(){ $(cat -)\n})();" > ./build/index.js
 
