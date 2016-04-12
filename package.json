@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && karma start",
-    "test-ci": "karma start --single-run=true",
+    "test-ci": "karma start --single-run=false",
     "compile-styles": "bash ./tasks/compile-styles.sh",
     "watch-styles": "sane 'npm run compile-styles' ./src/styles --glob='**/*.scss'",
     "compile-components": "bash ./tasks/compile-components.sh",
