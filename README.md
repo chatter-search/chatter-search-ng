@@ -10,7 +10,7 @@
 
 - Linux or Mac OS.
 - NodeJs with npm.
-- Globally available [`bower`][bower], [`standard`][standard] and [`live-server`][live-server].
+- Globally available [`bower`][bower], and [`live-server`][live-server].
 
 > Windows should work too if it have bash shell support, though not guaranteed.
 

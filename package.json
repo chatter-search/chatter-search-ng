@@ -4,12 +4,15 @@
   "description": "Chatter search web client written with Angular",
   "main": "index.js",
   "scripts": {
-    "test": "standard && karma start",
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test": "karma start",
     "test-ci": "karma start --single-run=false",
     "compile-styles": "bash ./tasks/compile-styles.sh",
     "watch-styles": "sane 'npm run compile-styles' ./src/styles --glob='**/*.scss'",
     "compile-components": "bash ./tasks/compile-components.sh",
-    "compile-scripts": "standard && bash ./tasks/compile-scripts.sh",
+    "precompile-scripts": "npm run lint",
+    "compile-scripts": "bash ./tasks/compile-scripts.sh",
     "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
     "compile-templates": "bash ./tasks/compile-templates.sh",
     "watch-templates": "sane 'npm run compile-templates' ./src --glob=**/*.html",
@@ -36,6 +39,7 @@
     "node-sass": "3.4.2",
     "phantomjs-prebuilt": "2.1.7",
     "postcss-cli": "2.5.1",
-    "sane": "1.3.4"
+    "sane": "1.3.4",
+    "standard": "6.0.8"
   }
 }
