@@ -22,9 +22,9 @@
 
 ## Set up
 
-Install local dependencies.
+Install local dependencies and build.
 
-- `npm install && bower install`
+- `npm install`
 - `npm run build`
 
 
