@@ -4,5 +4,5 @@ mkdir -p build
 
 cat \
 ./node_modules/babel-polyfill/dist/polyfill.js \
-./bower_components/angular/angular.js \
+./node_modules/angular/angular.js \
 > build/lib.js
