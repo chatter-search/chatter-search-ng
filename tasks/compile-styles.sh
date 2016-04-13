@@ -1,7 +1,6 @@
 #!/usr/bin/env bash -x
 
-mkdir -p build
+mkdir -p ./build
 
 node-sass ./src/styles/index.scss \
-| postcss -c ./postcss-options.json \
--o ./build/index.css
+| postcss "$@" -c ./postcss-options.json

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash -x
 
-version=${npm_package_version-$NPM_PACKAGE_VERSION}
+version=${npm_package_version}
 mkdir -p ./build/templates
 
 cat ./src/index.html | \

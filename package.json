@@ -7,19 +7,18 @@
     "lint": "standard",
     "pretest": "npm run lint",
     "test": "karma start",
-    "test-ci": "karma start --single-run=false",
-    "compile-styles": "bash ./tasks/compile-styles.sh",
+    "test-ci": "npm run test -- --single-run=false",
+    "compile-styles": "bash ./tasks/compile-styles.sh > ./build/index.css",
     "watch-styles": "sane 'npm run compile-styles' ./src/styles --glob='**/*.scss'",
-    "compile-components": "bash ./tasks/compile-components.sh",
-    "precompile-scripts": "npm run lint",
-    "compile-scripts": "bash ./tasks/compile-scripts.sh",
+    "compile-components": "bash ./tasks/compile-components.sh > build/lib.js",
+    "compile-scripts": "bash ./tasks/compile-scripts.sh > ./build/index.js",
     "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
     "compile-templates": "bash ./tasks/compile-templates.sh",
     "watch-templates": "sane 'npm run compile-templates' ./src --glob=**/*.html",
     "build": "bash ./tasks/build.sh",
-    "optimize": "./tasks/optimize.sh",
-    "deploy": "npm run build && npm run surge",
-    "surge": "surge ./build chatter-search.surge.sh"
+    "optimize": "bash ./tasks/optimize.sh",
+    "surge": "surge ./build chatter-search.surge.sh",
+    "deploy": "npm run optimize && npm run surge"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +28,7 @@
     "babel-cli": "6.7.5",
     "babel-polyfill": "6.7.4",
     "babel-preset-es2015": "6.6.0",
+    "cssnano": "3.5.2",
     "node-sass": "3.4.2",
     "postcss-cli": "2.5.1",
     "standard": "6.0.8"
@@ -45,6 +45,7 @@
     "mocha": "2.4.5",
     "phantomjs-prebuilt": "2.1.7",
     "sane": "1.3.4",
-    "surge": "0.17.7"
+    "surge": "0.17.7",
+    "uglify-js": "2.6.2"
   }
 }

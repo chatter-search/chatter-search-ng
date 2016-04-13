@@ -1,13 +1,14 @@
+# Chatter Search
 [![build status](https://gitlab.com/chattersearch/chatter-search-ng/badges/master/build.svg)](https://gitlab.com/chattersearch/chatter-search-ng/commits/master)
 > Chatter Search API client based on Angularjs.
 
-# Hosted
+## Hosted
 
 [chatter-search.surge.sh](http://chatter-search.surge.sh)
 
-# Develop
+## Develop
 
-## Requirements
+### Requirements
 
 - Linux or Mac OS.
 - NodeJs with npm.
@@ -15,13 +16,13 @@
 
 > Windows should work too if it have bash shell support, though not guaranteed.
 
-## Code conventions
+### Code conventions
 
 - Standardjs for JavaScript linting
 - ES6 syntax for JavaScript through Babel
 - Sass as css preprocessor
 
-## Set up
+### Set up
 
 Install local dependencies and build.
 
