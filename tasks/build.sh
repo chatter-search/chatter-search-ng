@@ -6,5 +6,3 @@ npm run compile-components & \
 npm run compile-templates &
 
 wait
-
-exit

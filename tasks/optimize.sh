@@ -6,5 +6,3 @@ bash ./tasks/compile-scripts.sh | ng-annotate -a - | uglifyjs -o ./build/index.j
 npm run compile-templates &
 
 wait
-
-exit
