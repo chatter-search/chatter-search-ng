@@ -1,4 +1,0 @@
-[runners.docker]
-  image = "node:5.6.0"
-  disable_cache = true
-  volumes = ["node_modules:node_modules:rw"]

@@ -1,9 +1,9 @@
 image: "node:5.6.0"
 
 cache:
-  script: all_tests
   paths:
-  - node_modules
+    - node_modules/
+  group: sharedcache
 
 all_tests:
   script:
