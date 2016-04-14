@@ -16,7 +16,6 @@ install:
   artifacts:
     paths:
      - node_modules/
-     - build/
 
 test:
   stage: test
