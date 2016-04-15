@@ -13,9 +13,6 @@ install:
     key: ${CI_BUILD_REF_NAME}
     paths:
       - node_modules/
-  artifacts:
-    paths:
-     - node_modules/
 
 test:
   stage: test
