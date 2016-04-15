@@ -5,14 +5,15 @@ stages:
   - test
   - deploy
 
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+
 install:
   stage: install
   script:
     - npm install
-  cache:
-    key: ${CI_BUILD_REF_NAME}
-    paths:
-      - node_modules/
 
 test:
   stage: test
