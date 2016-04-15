@@ -5,7 +5,6 @@ stages:
   - test
   - deploy
 
-
 install:
   stage: install
   script:
@@ -15,7 +14,8 @@ install:
     paths:
       - node_modules/
     artifacts:
-      - node_modules/
+      paths:
+        - node_modules/
 
 test:
   stage: test
