@@ -18,7 +18,7 @@
     "build": "bash ./tasks/build.sh",
     "optimize": "bash ./tasks/optimize.sh",
     "surge": "surge ./build chatter-search.surge.sh",
-    "deploy": "npm run optimize && npm run surge"
+    "deploy": "bash ./tasks/deploy.sh"
   },
   "author": "",
   "license": "ISC",
