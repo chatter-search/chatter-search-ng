@@ -5,14 +5,14 @@ stages:
   - test
   - deploy
 
+cache:
+  paths:
+    - node_modules/
+
 install:
   stage: install
   script:
-    - npm install
-  cache:
-    key: ${CI_PROJECT_ID}
-    paths:
-      - node_modules/
+    - npm install --production
 
 test:
   stage: test
