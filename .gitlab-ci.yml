@@ -1,19 +1,16 @@
 image: "node:5.6.0"
 
 stages:
-  - install
   - test
   - deploy
 
 cache:
   paths:
     - node_modules/
-  group: sharedcache
+  group: dependencycache
 
-install:
-  stage: install
-  script:
-    - npm install --production
+before_script:
+  - npm install --production
 
 test:
   stage: test
