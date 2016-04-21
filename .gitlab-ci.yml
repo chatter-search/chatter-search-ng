@@ -3,7 +3,6 @@ image: "node:5.6.0"
 stages:
   - install
   - test
-  - deploy
 
 install:
   stage: install
@@ -16,11 +15,4 @@ install:
 test:
   stage: test
   script:
-    - ln -s $CACHE_DIR $PWD/node_modules
     - ls $PWD/node_modules
-
-deploy:
-  stage: deploy
-  script:
-    - ln -s $CACHE_DIR $PWD/node_modules
-    - npm run deploy
