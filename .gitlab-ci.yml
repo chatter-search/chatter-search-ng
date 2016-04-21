@@ -5,9 +5,9 @@ stages:
   - deploy
 
 before_script:
-  - CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache
-  - mkdir -p $CACHE_DIR
-  - ln -s $PWD/node_modules $CACHE_DIR
+  - CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache/node_modules
+  - mkdir -p $CACHE_DIR & mkdir -p $PWD/node_modules
+  - ln -s $CACHE_DIR $PWD/node_modules
   - npm install --production
 
 test:
