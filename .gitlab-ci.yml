@@ -8,6 +8,7 @@ stages:
 cache:
   paths:
     - node_modules/
+  group: sharedcache
 
 install:
   stage: install
