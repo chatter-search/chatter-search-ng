@@ -8,7 +8,7 @@ stages:
 install:
   stage: install
   script:
-    - npm install --production
+    - mkdir node_modules && touch node_modules/WORKS.md
     - export CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache/node_modules
     - mkdir -p $CACHE_DIR
     - ln -s $PWD/node_modules $CACHE_DIR
