@@ -5,9 +5,10 @@ stages:
   - deploy
 
 cache:
+  name: ${CI_BUILD_REF_NAME}
   paths:
     - node_modules/
-  group: dependencycache
+  group: sharedcache
 
 before_script:
   - npm install --production
