@@ -1,5 +1,5 @@
-# Chatter Search
-[![build status](https://gitlab.com/chattersearch/chatter-search-ng/badges/master/build.svg)](https://gitlab.com/chattersearch/chatter-search-ng/commits/master)
+# Chatter Search [![build status](https://gitlab.com/chattersearch/chatter-search-ng/badges/master/build.svg)](https://gitlab.com/chattersearch/chatter-search-ng/commits/master)
+
 > Chatter Search API client based on Angularjs.
 
 ## Hosted
