@@ -17,7 +17,7 @@ test:
   stage: test
   script:
     - ln -s $CACHE_DIR $PWD/node_modules
-    - npm test
+    - ls $PWD/node_modules
 
 deploy:
   stage: deploy
