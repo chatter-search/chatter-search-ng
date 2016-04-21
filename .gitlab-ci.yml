@@ -4,13 +4,10 @@ stages:
   - test
   - deploy
 
-cache:
-  name: ${CI_BUILD_REF_NAME}
-  paths:
-    - node_modules/
-  group: sharedcache
-
 before_script:
+  - CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache
+  - mkdir -p CACHE_DIR
+  - ln -s $PWD/node_modules CACHE_DIR
   - npm install --production
 
 test:
