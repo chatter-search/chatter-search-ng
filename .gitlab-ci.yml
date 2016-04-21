@@ -1,21 +1,26 @@
 image: "node:5.6.0"
 
 stages:
+  - install
   - test
   - deploy
 
-before_script:
-  - CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache/node_modules
-  - mkdir -p $CACHE_DIR & mkdir -p $PWD/node_modules
-  - ln -s $CACHE_DIR $PWD/node_modules
-  - npm install --production
+install:
+  stage: install
+  script:
+    - npm install --production
+    - export CACHE_DIR=${CI_PROJECT_DIR}/${CI_BUILD_REF_NAME}/cache/node_modules
+    - mkdir -p $CACHE_DIR
+    - ln -s $PWD/node_modules $CACHE_DIR
 
 test:
   stage: test
   script:
+    - ln -s $CACHE_DIR $PWD/node_modules
     - npm test
 
 deploy:
   stage: deploy
   script:
+    - ln -s $CACHE_DIR $PWD/node_modules
     - npm run deploy
