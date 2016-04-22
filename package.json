@@ -1,6 +1,6 @@
 {
   "name": "chatter-search-ng",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Chatter search web client written with Angular",
   "main": "index.js",
   "scripts": {
