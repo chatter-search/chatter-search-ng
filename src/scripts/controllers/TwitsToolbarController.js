@@ -2,6 +2,8 @@
 angular.module('ChatterApp')
 .controller('TwitsToolbarController', ($scope, $filter) => {
   $scope.sortBy = 'created_at_timestamp'
-  $scope.retweetCount = 0
-  $scope.hasImage = false
+  $scope.filter = {
+    retweetCount: 0,
+    hasImage: false
+  }
 })

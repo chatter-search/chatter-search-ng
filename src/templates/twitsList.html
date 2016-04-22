@@ -2,14 +2,14 @@
   <div class="user-timeline-items">
     <twits-toolbar></twits-toolbar>
     <div class="user-timeline-content">
-      <section class="user-timeline-item" ng-repeat="twit in filteredTwits = (twits | retweetCountFilter:retweetCount | hasImageFilter:hasImage | orderBy:sortBy)">
+      <section class="user-timeline-item" ng-repeat="twit in twits | retweetCountFilter:filter | hasImageFilter:filter | orderBy:sortBy">
         <a ng-repeat="photo in twit.photos" href="{{photo.url}}">
           <img ng-src="{{photo.media_url_https}}" alt="{{photo.text}}" />
         </a>
         <div class="user-timeline-text">{{twit.text}}</div>
         <div class="clear"></div>
       </section>
-      <section class="user-timeline-item" ng-show="!filteredTwits.length">
+      <section class="user-timeline-item" ng-show="filter.isNothingFound">
         <div class="user-timeline-text">Nothing matched your criteria.</div>
       </section>
     </div>
