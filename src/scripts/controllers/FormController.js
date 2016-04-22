@@ -16,7 +16,6 @@ angular.module('ChatterApp')
       (resps) => {
         $scope.isLoading = false
         $scope.user = resps[0].data
-        $scope._twits = resps[1].data.slice()
         $scope.twits = resps[1].data
       },
       () => {
