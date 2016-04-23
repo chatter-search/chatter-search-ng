@@ -1,6 +1,7 @@
 image: "node:5.6.0"
 
-kiss:
+me:
+  stage: kiss
   script:
     - npm install --production
     - npm test
