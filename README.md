@@ -2,9 +2,9 @@
 
 > Chatter Search API client based on Angularjs.
 
-## Hosted
+## Demo
 
-[chatter-search.surge.sh](http://chatter-search.surge.sh)
+[chatter-search-ng.surge.sh](http://chatter-search-ng.surge.sh)
 
 ## Develop
 

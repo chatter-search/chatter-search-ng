@@ -1,7 +1,7 @@
 {
   "name": "chatter-search-ng",
   "version": "2.2.1",
-  "description": "Chatter search web client written with Angular",
+  "description": "Chatter search web client.",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
@@ -17,7 +17,7 @@
     "watch-templates": "sane 'npm run compile-templates' ./src --glob=**/*.html",
     "build": "bash ./tasks/build.sh",
     "optimize": "bash ./tasks/optimize.sh",
-    "surge": "surge ./build chatter-search.surge.sh",
+    "surge": "surge ./build chatter-search-ng.surge.sh",
     "deploy": "bash ./tasks/deploy.sh"
   },
   "author": "",
