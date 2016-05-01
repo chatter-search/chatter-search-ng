@@ -2,7 +2,8 @@
   <div class="user-timeline-items">
     <twits-toolbar></twits-toolbar>
     <div class="user-timeline-content">
-      <section class="user-timeline-item" ng-repeat="twit in twits | retweetCountFilter:filter.retweetCount | hasImageFilter:filter.hasImage | orderBy:sortBy as filteredTwits">
+      <section class="user-timeline-item" ng-repeat="twit in twits | retweetCountFilter:filter.retweetCount | hasImageFilter:filter.hasImage | orderBy:sortBy:sortByDir as filteredTwits">
+        <time class="twitted-at clear" datetime="{{twit.created_at}}">{{twit.created_at_timestamp | moment:timeAgo}}</time>
         <a ng-repeat="photo in twit.photos" href="{{photo.url}}">
           <img ng-src="{{photo.media_url_https}}" alt="{{photo.text}}" />
         </a>
