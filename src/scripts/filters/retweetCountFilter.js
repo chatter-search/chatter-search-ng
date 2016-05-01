@@ -1,12 +1,12 @@
 /* global angular */
 angular.module('ChatterApp')
 .filter('retweetCountFilter', ($filter) => {
-  return (twits, retweetCount) => {
+  return (tweets, retweetCount) => {
     if (retweetCount) {
-      twits = $filter('filter')(twits, (el, ix) => {
+      tweets = $filter('filter')(tweets, (el, ix) => {
         return el.retweet_count > retweetCount
       })
     }
-    return twits
+    return tweets
   }
 })

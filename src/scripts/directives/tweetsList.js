@@ -1,8 +1,8 @@
 /* global angular */
 angular.module('ChatterApp')
-.directive('twitsList', () => {
+.directive('tweetsList', () => {
   return {
     restrict: 'E',
-    templateUrl: 'templates/twitsList.html'
+    templateUrl: 'templates/tweetsList.html'
   }
 })

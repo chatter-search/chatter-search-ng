@@ -1,12 +1,12 @@
 /* global angular */
 angular.module('ChatterApp')
 .filter('hasImageFilter', ($filter) => {
-  return (twits, hasImage) => {
+  return (tweets, hasImage) => {
     if (hasImage) {
-      twits = $filter('filter')(twits, (el, ix) => {
+      tweets = $filter('filter')(tweets, (el, ix) => {
         return Boolean(el.photos)
       })
     }
-    return twits
+    return tweets
   }
 })

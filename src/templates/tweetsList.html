@@ -1,8 +1,8 @@
-<div id="user-timeline" ng-show="twits.length">
+<div id="user-timeline" ng-show="tweets.length">
   <div class="user-timeline-items">
-    <twits-toolbar></twits-toolbar>
+    <tweets-toolbar></tweets-toolbar>
     <div class="user-timeline-content">
-      <section class="user-timeline-item" ng-repeat="twit in twits | retweetCountFilter:filter.retweetCount | hasImageFilter:filter.hasImage | orderBy:sortBy:sortByDir as filteredTwits">
+      <section class="user-timeline-item" ng-repeat="twit in tweets | retweetCountFilter:filter.retweetCount | hasImageFilter:filter.hasImage | orderBy:sortBy:sortByDir as filteredTweets">
         <time class="twitted-at clear" datetime="{{twit.created_at}}">{{twit.created_at_timestamp | moment:timeAgo}}</time>
         <a ng-repeat="photo in twit.photos" href="{{photo.url}}">
           <img ng-src="{{photo.media_url_https}}" alt="{{photo.text}}" />
@@ -10,7 +10,7 @@
         <div class="user-timeline-text">{{twit.text}}</div>
         <div class="clear"></div>
       </section>
-      <section class="user-timeline-item" ng-if="filteredTwits.length === 0">
+      <section class="user-timeline-item" ng-if="filteredTweets.length === 0">
         <div class="user-timeline-text">Nothing matched your criteria.</div>
         <div class="clear"></div>
       </section>

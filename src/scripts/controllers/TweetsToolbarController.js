@@ -1,6 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('TwitsToolbarController', ($scope, $filter) => {
+.controller('TweetsToolbarController', ($scope, $filter) => {
   $scope.sortBy = 'created_at_timestamp'
   $scope.sortByDir = -1
   $scope.filter = {

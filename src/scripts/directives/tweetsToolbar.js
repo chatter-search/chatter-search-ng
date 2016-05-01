@@ -1,9 +1,9 @@
 /* global angular */
 angular.module('ChatterApp')
-.directive('twitsToolbar', () => {
+.directive('tweetsToolbar', () => {
   return {
     restrict: 'E',
-    templateUrl: 'templates/twitsToolbar.html',
-    controller: 'TwitsToolbarController'
+    templateUrl: 'templates/tweetsToolbar.html',
+    controller: 'TweetsToolbarController'
   }
 })

@@ -1,5 +1,5 @@
 /* global describe, it, expect, beforeEach, inject */
-describe('twitsList directive', () => {
+describe('tweetsList directive', () => {
   var $compile, $rootScope
 
   // Load the myApp module, which contains the directive
@@ -15,7 +15,7 @@ describe('twitsList directive', () => {
 
   it('Replaces the element with the appropriate content', function () {
     // Compile a piece of HTML containing the directive
-    var element = $compile('<twits-list><twits-list>')($rootScope)
+    var element = $compile('<tweets-list><tweets-list>')($rootScope)
     // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
     $rootScope.$digest()
     // Check that the compiled element contains the templated content
