@@ -10,7 +10,7 @@
     "test-ci": "npm run test -- --single-run=false",
     "compile-styles": "bash ./tasks/compile-styles.sh > ./build/index.css",
     "watch-styles": "sane 'npm run compile-styles' ./src/styles --glob='**/*.scss'",
-    "compile-components": "bash ./tasks/compile-components.sh > build/lib.js",
+    "compile-dependencies": "bash ./tasks/compile-dependencies.sh > build/lib.js",
     "compile-scripts": "bash ./tasks/compile-scripts.sh > ./build/index.js",
     "watch-scripts": "sane 'npm run compile-scripts' ./src/scripts --glob=**/*.js",
     "compile-templates": "bash ./tasks/compile-templates.sh",
