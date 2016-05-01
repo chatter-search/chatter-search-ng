@@ -1,6 +1,7 @@
 <form class="user-timeline-toolbar">
   <label>
-    Has image:<input ng-model="filter.hasImage" type="checkbox" name="hasImage" value="true" />
+    Has image:<input
+        ng-model="filter.hasImage" type="checkbox" name="hasImage" value="true" />
   </label>
   <label>
     Minimal number of retweets:<input ng-model="filter.retweetCount" type="number" min="0" step="1" value="0" name="retweetCount" />
@@ -13,4 +14,8 @@
       Sort by length:<input ng-model="sortBy" type="radio" value="text_length" name="sortBy" />
     </label>
   </radiogroup>
+    <label>
+        Sort direction:<input name="sortByDir" type="checkbox" ng-model="sortByDir" ng-checked="isDecending()" ng-true-value="-1"
+        />
+    </label>
 </form>
