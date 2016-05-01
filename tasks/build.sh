@@ -2,7 +2,7 @@
 
 npm run compile-styles & \
 npm run compile-scripts & \
-npm run compile-components & \
+npm run compile-dependencies & \
 npm run compile-templates &
 
 wait
