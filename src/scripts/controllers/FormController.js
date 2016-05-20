@@ -1,6 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('FormController', ($scope, UserService) => {
+.controller('FormController', ($rootScope, $scope, UserService) => {
   $scope.isExpanded = false
   $scope.isLoading = false
 
@@ -19,8 +19,8 @@ angular.module('ChatterApp')
     .then(
       (resps) => {
         $scope.isLoading = false
-        $scope.user = resps[0].data
-        $scope.tweets = resps[1].data
+        $rootScope.user = resps[0].data
+        $rootScope.tweets = resps[1].data
       },
       () => {
         $scope.isLoading = false
