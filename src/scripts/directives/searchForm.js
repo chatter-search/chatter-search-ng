@@ -4,6 +4,6 @@ angular.module('ChatterApp')
   return {
     restrict: 'E',
     templateUrl: 'templates/searchForm.html',
-    controller: 'AppController'
+    controller: 'FormController'
   }
 })

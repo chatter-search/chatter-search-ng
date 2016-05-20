@@ -1,26 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('AppController', ($scope, UserService) => {
-  $scope.isExpanded = false
-  $scope.isLoading = false
-
-  $scope.expandSearch = () => {
-    $scope.isExpanded = !$scope.isExpanded
-  }
-  $scope.submit = () => {
-    $scope.isLoading = true
-    UserService.all({
-      screen_name: $scope.screenName
-    })
-    .then(
-      (resps) => {
-        $scope.isLoading = false
-        $scope.user = resps[0].data
-        $scope.tweets = resps[1].data
-      },
-      () => {
-        $scope.isLoading = false
-      }
-    )
-  }
+.controller('AppController', ($scope) => {
+  $scope.user
+  $scope.twits
 })
