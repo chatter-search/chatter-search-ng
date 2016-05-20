@@ -9,13 +9,7 @@
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body ng-app="ChatterApp">
-        <main ng-view>
-            <div ng-controller="AppController">
-                <search-form></search-form>
-                <user-card></user-card>
-                <tweets-list></tweets-list>
-            </div>
-        </main>
+        <main ng-view ng-include="'templates/main.html'"></main>
         <script src="lib.js"></script>
         <script src="index.js"></script>
     </body>
