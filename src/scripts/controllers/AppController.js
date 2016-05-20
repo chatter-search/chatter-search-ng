@@ -1,6 +1,6 @@
 /* global angular */
 angular.module('ChatterApp')
-.controller('FormController', ($scope, UserService) => {
+.controller('AppController', ($scope, UserService) => {
   $scope.isExpanded = false
   $scope.isLoading = false
 

@@ -1,0 +1,7 @@
+<div class="container">
+    <div ng-class="{loading:isLoading}" class="twitter"></div>
+</div>
+<form ng-submit="submit()" class="search-bar" ng-class="{expanded:isExpanded}" autocomplete="off">
+    <input focus-when="isExpanded" ng-model="screenName" id="search-bar-input" type="text" name="screenName" class="input" autocomplete="off">
+    <button ng-click="expandSearch()" type="reset" class="search"></button>
+</form>
