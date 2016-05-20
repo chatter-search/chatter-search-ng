@@ -7,7 +7,7 @@ angular.module('ChatterApp')
   $scope.expandSearch = () => {
     if ($scope.isExpanded) {
       $scope.user = null
-      $scope.twits = null
+      $scope.tweets = null
     }
     $scope.isExpanded = !$scope.isExpanded
   }
@@ -20,7 +20,7 @@ angular.module('ChatterApp')
       (resps) => {
         $scope.isLoading = false
         $scope.user = resps[0].data
-        $scope.twits = resps[1].data
+        $scope.tweets = resps[1].data
       },
       () => {
         $scope.isLoading = false
