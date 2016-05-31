@@ -1,4 +1,4 @@
-# Chatter Search [![Build Status](https://travis-ci.org/chattersearch/chatter-search-ng.svg?branch=master)](https://travis-ci.org/chattersearch/chatter-search-ng)
+# Chatter Search [![Build Status](https://travis-ci.org/chatter-search/chatter-search-ng.svg?branch=master)](https://travis-ci.org/chattersearch/chatter-search-ng)
 
 > Chatter Search API client based on Angularjs.
 
